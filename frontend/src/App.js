@@ -1,5 +1,5 @@
 import Product from './components/Product';
-import Subcategory from './components/Subcategory';
+
 import { Container } from 'react-bootstrap'
 function App() {
   return (
@@ -7,7 +7,7 @@ function App() {
       <main className="py-3">
       <h1> Products, Sub Category and Sub Products</h1>
       <Product/>
-      <Subcategory/>
+
       </main>
     </Container>
   );

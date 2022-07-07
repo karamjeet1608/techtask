@@ -12,6 +12,7 @@ export const listSubcategories = (id) => async (dispatch) => {
             type:SUBCATEGORY_LIST_SUCCESS,
             payload:data
         })
+        console.log("Dispatch success")
 
     }
     catch (error){

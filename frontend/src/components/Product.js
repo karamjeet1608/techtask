@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Row, Col } from 'react-bootstrap'
 import {listProducts} from '../actions/productActions'
 import {listSubcategories} from '../actions/subcategoryActions'
+import Subcategory from './Subcategory'
 
 function Product() {
     const dispatch = useDispatch()
@@ -25,11 +26,11 @@ function Product() {
             {products.map(product => (   
                 <Col key={product.id}>
                     {product.productName}
-                    <input type="checkbox" class="custom-control-input" id={product.id} onChange={checkboxHandler(product.id)} />
+                    <input type="checkbox" class="custom-control-input" id={product.id} onChange={() => checkboxHandler(product.id)} />
                 </Col>
-                
             ))}
         </Row>
+        <Subcategory/>
     </div>
     )
 }

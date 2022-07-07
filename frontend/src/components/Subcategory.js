@@ -1,24 +1,26 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { Row, Col } from 'react-bootstrap'
+import { useSelector } from 'react-redux'
+
+
 function Subcategory() {
 
-  const dispatch = useDispatch()
-    const productList = useSelector(state => state.productList)
-    const { error, loading, products } = productList
+  const subcategoryList = useSelector(state => state.subcategoryList)
+  console.log("subcategoryList: ", subcategoryList)
+  const { error, loading, subcategories } = subcategoryList
 
   return (
         <div>
         <h1>This is my Sub category components</h1>
-        {/* <Row>
-            {products.map(product => (   
-                <Col key={product.id}>
-                    {product.productName}
-                    <input type="checkbox" class="custom-control-input" id={product.id} onChange={checkboxHandler(product.id)} />
+        <Row>
+            {subcategories.map(subcategory => (   
+                <Col key={subcategory.id}>
+                    {subcategory.subCategoryName}
+                    <input type="checkbox" class="custom-control-input" id={subcategory.id} />
                     <Subcategory/>
                 </Col>
-                
             ))}
-        </Row> */}
+        </Row>
     </div>
   )
 }
