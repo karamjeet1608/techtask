@@ -27,10 +27,11 @@ function Product() {
                 <Col key={product.id}>
                     {product.productName}
                     <input type="checkbox" class="custom-control-input" id={product.id} onChange={() => checkboxHandler(product.id)} />
+                    <Subcategory/>
                 </Col>
             ))}
         </Row>
-        <Subcategory/>
+        
     </div>
     )
 }
